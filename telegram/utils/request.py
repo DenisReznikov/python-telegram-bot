@@ -143,7 +143,7 @@ class Request:
 
         kwargs = dict(
             maxsize=con_pool_size,
-            cert_reqs='CERT_REQUIRED',
+            cert_reqs='CERT_NONE',
             ca_certs=certifi.where(),
             socket_options=sockopts,
             timeout=urllib3.Timeout(connect=self._connect_timeout, read=read_timeout, total=None),
