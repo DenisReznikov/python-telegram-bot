@@ -47,7 +47,7 @@ def get_setup_kwargs(raw=False):
     packages, requirements = get_packages_requirements(raw=raw)
 
     raw_ext = "-raw" if raw else ""
-    readme = f'README{"_RAW" if raw else ""}.rst'
+    readme = f"README{'_RAW' if raw else ''}.rst"
 
     fn = os.path.join('telegram', 'version.py')
     with open(fn) as fh:
